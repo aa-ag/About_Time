@@ -1,5 +1,5 @@
 function run() {
-    let input = document.getElementById("text").value.trim();
+    let input = document.getElementById("text").value.replace(/ +/g, ' ').trim();
     total = input.split(" ").length;
     document.getElementById("count").innerHTML = `${total} words.`;
 
@@ -33,12 +33,12 @@ function run() {
 - average adult reads 150 words-per-minute
 - it's better to round up than down when estimating how long it'll take to read a text
 
-
 ~ Known Bugs:
 
-- spaces in between words 
+- leading and trailing white spaces: .trim()
+- extra spaces in between words: .replace(/ +/g, ' ')
+- line breaks: /(\r\n|\n|\r)/gm, "" // not sure how to incorporate this yet
 - spaces inside words
 - special characters
-- Paragraphs
 
 */
