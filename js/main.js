@@ -1,17 +1,19 @@
 function run() {
-    let input = document.getElementById("text").value.replace(/ +/g, ' ').trim();
+    let input = document.getElementById("text").value.trim().replace(/\s+/g," ");
     total = input.split(" ").length;
     document.getElementById("count").innerHTML = `${total} words.`;
 
     let minutes = total / 150;
     if (minutes < 1) {
-        document.getElementById("time").innerHTML = `Reading time: less than a minute!`;
+        document.getElementById("time").innerHTML = `Approx. reading time: less 1 a minute!`;
     } else {
-        document.getElementById("time").innerHTML = `Reading time: ${Math.ceil(minutes)} minutes.`;
+        document.getElementById("time").innerHTML = `Approx. reading time: ${Math.ceil(minutes)} minutes.`;
     }
 }
 
 /* 
+
+// .replace(/(\r\n|\n|\r)/gm," ") includes every possibility as depends on encoding (mac, linux, windows)
 
 ~ Long version: for loop:
 
@@ -40,5 +42,7 @@ function run() {
 - line breaks: /(\r\n|\n|\r)/gm, "" // not sure how to incorporate this yet
 - spaces inside words
 - special characters
+- non "readable" text (nav bar, menu items, ads, etc)
+- empy run
 
 */
