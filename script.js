@@ -1,3 +1,31 @@
+run(document.body)
+
+function run(element){
+    if (element.hasChildNodes()) {
+        element.childNodes.forEach(run)
+    } else if (element.nodeType === Text.TEXT_NODE) {
+        section = element.textContent
+        count = section.length
+        console.log(count)
+    }
+} 
+
+
+
+// ### IF P GRABBED, LENGHT IS NUMB OF P'S
+
+// run(document.body)
+
+// function run(){
+//     let readble = document.getElementsByTagName('p')
+//     console.log(readble.length)
+// }
+
+
+// THIS WORKS PERFECT, FOR STATIC/MANUAL SITE
+
+/* 
+
 function run() {
     let input = document.getElementById("text").value.trim().replace(/\s+/g," ");
     total = input.split(" ").length;
@@ -11,9 +39,11 @@ function run() {
     }
 }
 
-/* 
+
 
 // .replace(/(\r\n|\n|\r)/gm," ") includes every possibility as depends on encoding (mac, linux, windows)
+
+
 
 ~ Long version: for loop:
 
@@ -46,3 +76,19 @@ function run() {
 - empy run
 
 */
+
+/* ###### Replace text client-side experiment ###### 
+
+replaceText(document.body)
+
+function replaceText(element) {
+    if (element.hasChildNodes()) {
+        element.childNodes.forEach(replaceText)
+    } else if (element.nodeType === Text.TEXT_NODE) {
+      element.textContent = element.textContent.replace(/reddit/gi, '------')
+    }
+} 
+
+
+
+*/ 
