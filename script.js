@@ -1,5 +1,3 @@
-run(document.body)
-
 let words = run(document.querySelectorAll('p'))
 
 function run(words) {
@@ -11,6 +9,27 @@ function run(words) {
 }
 
 console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
+
+
+
+// ### TEST ###
+
+// run(document.body)
+
+// let words = run(document.querySelectorAll('p'))
+
+// function run(words) {
+//     let count = []
+// 	for (let i = 0; i < words.length; i++) {
+//         count.push(words[i].textContent)
+// 	}
+// 	return count
+// }
+
+// console.log(words)
+
+
+
 
 
 // bewlow does not grabbing first paragraph from Reddit's wikipedia & code from Google.com
@@ -60,6 +79,8 @@ console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
 
 
 // THIS WORKS PERFECT, FOR STATIC/MANUAL SITE
+
+
 
 // function run() {
 //     let input = document.getElementById("text").value.trim().replace(/\s+/g," ");
