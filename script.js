@@ -10,11 +10,7 @@ function run(words) {
 
 console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
 
-
-
 // ### TEST ###
-
-// run(document.body)
 
 // let words = run(document.querySelectorAll('p'))
 

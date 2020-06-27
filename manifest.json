@@ -2,6 +2,7 @@
     "manifest_version": 2,
     "name": "About Time",
     "version": "0.1.0",
+    "icons": { "128": "icon_128.png" },
     "content_scripts": [
         {
         "matches": ["<all_urls>"],
