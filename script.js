@@ -4,11 +4,12 @@ function run(words) {
     let count = 0
 	for (let i = 0; i < words.length; i++) {
         count += words[i].textContent.split(' ').length
-	}
-	return count
+        }
+        return count
 }
 
-console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
+let result = `${Math.ceil(words / 200)} min`
+console.log(result);
 
 // ### TEST ###
 
@@ -24,10 +25,7 @@ console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
 
 // console.log(words)
 
-
-
-
-
+// <!--
 // bewlow does not grabbing first paragraph from Reddit's wikipedia & code from Google.com
 
 // run(document.body)
@@ -59,25 +57,8 @@ console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
 // } 
 
 
-// ### test to see length of each section
-
-        // element.textContent = element.textContent.length
-        // console.log(element.textContent) 
-
-// ### IF P GRABBED, LENGHT IS NUMB OF P'S
-
-// run(document.body)
-
-// function run(){
-//     let readble = document.getElementsByTagName('p')
-//     console.log(readble.length)
-// }
-
 
 // THIS WORKS PERFECT, FOR STATIC/MANUAL SITE
-
-
-
 // function run() {
 //     let input = document.getElementById("text").value.trim().replace(/\s+/g," ");
 //     total = input.split(" ").length;
@@ -120,4 +101,4 @@ console.log(`Approx reading time: ${Math.ceil(words / 200)} minutes`)
 //     } else if (element.nodeType === Text.TEXT_NODE) {
 //       element.textContent = element.textContent.replace(/reddit/gi, '------')
 //     }
-// } 
+// }
