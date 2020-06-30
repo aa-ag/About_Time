@@ -1,3 +1,4 @@
+
 let words = run(document.querySelectorAll('p'))
 
 function run(words) {
@@ -8,8 +9,10 @@ function run(words) {
         return count
 }
 
-let result = `${Math.ceil(words / 200)} min`
+let result = `${Math.ceil(words / 200)}m`
 console.log(result);
+
+chrome.runtime.sendMessage({res: `${result}`}); 
 
 // ### TEST ###
 
@@ -24,6 +27,7 @@ console.log(result);
 // }
 
 // console.log(words)
+
 
 // <!--
 // bewlow does not grabbing first paragraph from Reddit's wikipedia & code from Google.com
