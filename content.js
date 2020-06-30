@@ -10,7 +10,6 @@ function run(words) {
 }
 
 let result = `${Math.ceil(words / 200)}m`
-console.log(result);
 
 chrome.runtime.sendMessage({res: `${result}`}); 
 
