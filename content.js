@@ -1,10 +1,13 @@
+// Gloabl variable
 
 let words = run(document.querySelectorAll('p'))
 
-function run(words) {
+// Helper function
+
+function run(text) {
     let count = 0
-	for (let i = 0; i < words.length; i++) {
-        count += words[i].textContent.split(' ').length
+	for (let i = 0; i < text.length; i++) {
+        count += text[i].textContent.split(' ').length
         }
         return count
 }
